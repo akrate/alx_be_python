@@ -8,7 +8,7 @@ class Book:
 
 class EBook(Book):
     def __init__(self,title,author,file_size):
-        Book.__init__(self,title,author)
+        super().__init__(self,title,author)
         self.file_size = file_size
     
     def __str__(self):
@@ -16,7 +16,7 @@ class EBook(Book):
 
 class PrintBook(Book):
     def __init__(self,title,author,page_count):
-        Book.__init__(self,title,author)
+        super().__init__(self,title,author)
         self.page_count = page_count
 
     def __str__(self):
